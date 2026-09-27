@@ -2,6 +2,10 @@
 
 SafeDrive is a privacy-first, offline-capable Progressive Web App (PWA) prototype for real-time eye-closure monitoring. It uses the device camera to detect face landmarks locally in the browser and provides a continuous in-app audio warning for sustained eye closure.
 
+## Live demo
+
+Try SafeDrive at [drivesafelly.netlify.app](https://drivesafelly.netlify.app/). For camera access, open it on a supported device or desktop browser and allow the requested camera permission.
+
 > **Safety disclaimer:** SafeDrive is an experimental driver-assistance prototype. It is not a safety-critical system, does not replace an alert driver, safe driving practices, rest, or any vehicle safety system, and must not be relied on to prevent accidents or injury.
 
 ## Features
