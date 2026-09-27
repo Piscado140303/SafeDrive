@@ -1,0 +1,3 @@
+# MediaPipe distributes these generated runtime files with intentional trailing
+# whitespace. They are tracked verbatim for SafeDrive's offline PWA pipeline.
+public/mediapipe/*.js -whitespace

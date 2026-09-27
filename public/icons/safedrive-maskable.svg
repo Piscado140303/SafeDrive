@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="SafeDrive">
+  <rect width="512" height="512" fill="#07101e"/>
+  <circle cx="256" cy="256" r="190" fill="#183158"/>
+  <path fill="none" stroke="#5eead4" stroke-linecap="round" stroke-width="28" d="M119 281c34-39 73-59 137-59s103 20 137 59"/>
+  <path fill="none" stroke="#eef5ff" stroke-linecap="round" stroke-width="22" d="M145 315h78m66 0h78"/>
+  <circle cx="184" cy="315" r="11" fill="#5eead4"/><circle cx="328" cy="315" r="11" fill="#5eead4"/>
+</svg>

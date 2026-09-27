@@ -1,0 +1,53 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #eef5ff; background: #07101e; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button { font: inherit; }
+.app-shell { min-height: 100vh; min-height: 100dvh; display: grid; place-items: center; padding: max(24px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); background: radial-gradient(circle at top, #183158 0%, #07101e 58%); }
+.monitor-card { width: min(100%, 620px); padding: 28px; border: 1px solid #294464; border-radius: 24px; background: rgba(12, 28, 49, .9); box-shadow: 0 24px 80px rgba(0,0,0,.35); }
+.eyebrow { margin: 0 0 8px; color: #5eead4; font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(1.8rem, 5vw, 2.55rem); letter-spacing: -.04em; }
+.intro, .hint { color: #aabbd0; line-height: 1.5; }
+.camera-frame { position: relative; aspect-ratio: 4 / 3; overflow: hidden; margin: 24px 0 16px; border-radius: 17px; background: #030812; }
+.camera-preview, .landmark-overlay { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1); }
+.landmark-overlay { pointer-events: none; }
+.camera-placeholder { position: absolute; inset: 0; display: grid; place-items: center; color: #7890ae; }
+.instruction-overlay { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 28px; text-align: center; color: #fff; background: rgba(4, 15, 30, .91); }
+.instruction-overlay > span { color: #5eead4; font-size: clamp(1.1rem, 3vw, 1.55rem); font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
+.instruction-overlay > strong { max-width: 480px; font-size: clamp(1.3rem, 4vw, 2rem); line-height: 1.2; }
+.instruction-overlay .countdown-number { color: #fff; font-size: clamp(5rem, 16vw, 8rem); line-height: .9; }
+.instruction-overlay .instruction-action { font-size: clamp(1.45rem, 5vw, 2.25rem); }
+.instruction-overlay small { color: #b9cadf; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.instruction-overlay button { margin-top: 8px; padding: 14px 20px; border: 0; border-radius: 12px; color: #06201f; background: #5eead4; font-weight: 900; text-transform: uppercase; cursor: pointer; }
+.required-overlay { gap: 22px; background: rgba(42, 20, 30, .95); }
+.required-overlay > span { color: #ff9aa3; }.required-overlay > strong { font-size: clamp(1.35rem, 4vw, 2rem); }
+.overlay-progress { width: min(100%, 390px); height: 10px; overflow: hidden; margin-top: 8px; border-radius: 99px; background: #29435f; }.overlay-progress i { display: block; height: 100%; border-radius: inherit; background: #5eead4; transition: width .1s linear; }
+.state-panel { display: grid; gap: 4px; padding: 16px 18px; border: 1px solid #294464; border-radius: 14px; background: #101f34; }
+.state-panel span, .state-panel small { color: #aabbd0; font-size: .8rem; }
+.state-panel strong { font-size: clamp(1.75rem, 6vw, 2.5rem); letter-spacing: .04em; }
+.state-panel.open { border-color: #138b78; background: #0c3937; }.state-panel.open strong { color: #5eead4; }
+.state-panel.closed { border-color: #e0525e; background: #421f2a; }.state-panel.closed strong { color: #ff9aa3; }
+.state-panel.squinting { border-color: #d89a36; background: #3d2d13; }.state-panel.squinting strong { color: #ffd38a; }
+.calibration-panel { display: grid; gap: 5px; margin-top: 12px; padding: 14px 18px; border: 1px solid #536985; border-radius: 14px; background: #0c192b; }
+.calibration-panel > span, .calibration-panel small { color: #aabbd0; font-size: .8rem; }
+.calibration-panel.calibrated { border-color: #138b78; }
+.calibration-panel.calibrated strong { color: #5eead4; }
+.threshold-settings { display: grid; gap: 8px; margin-top: 12px; padding: 14px 18px; border: 1px solid #536985; border-radius: 14px; background: #0c192b; color: #dce9f7; }
+.threshold-settings > span, .preset-list > span { color: #aabbd0; font-size: .8rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+.threshold-settings label, .preset-list label { display: flex; align-items: center; gap: 9px; min-height: 28px; cursor: pointer; }.threshold-settings input { accent-color: #5eead4; }
+.threshold-settings small { color: #aabbd0; padding-left: 27px; }.preset-list { display: grid; gap: 7px; margin-top: 4px; padding-top: 10px; border-top: 1px solid #294464; }
+.progress-wrap { display: grid; gap: 8px; margin-top: 7px; }
+.progress-label { display: flex; justify-content: space-between; gap: 12px; color: #d5e2f0; font-size: .82rem; }
+.progress-track { height: 8px; overflow: hidden; border-radius: 99px; background: #203653; }
+.progress-bar { height: 100%; border-radius: inherit; background: #5eead4; transition: width .12s linear; }
+.status { min-height: 1.4em; margin: 15px 0; color: #c9d8e9; }
+.monitor-button { width: 100%; padding: 15px 20px; border: 0; border-radius: 12px; cursor: pointer; color: #06201f; background: #5eead4; font-weight: 800; transition: transform .15s, background .15s; }
+.monitor-button:hover { background: #91f5e8; transform: translateY(-1px); }
+.monitor-button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.monitor-button:disabled, .secondary-button:disabled { cursor: not-allowed; opacity: .55; transform: none; }
+.secondary-button { width: 100%; margin-top: 10px; padding: 12px 20px; border: 1px solid #5b7596; border-radius: 12px; cursor: pointer; color: #dce9f7; background: transparent; font-weight: 750; }
+.secondary-button:hover:not(:disabled) { border-color: #91f5e8; color: #91f5e8; }
+.hint { margin: 14px 0 0; font-size: .85rem; }
+.install-help { margin-top: 16px; padding: 13px 16px; border: 1px solid #294464; border-radius: 12px; color: #c9d8e9; background: #0c192b; font-size: .9rem; line-height: 1.45; }
+.install-help summary { cursor: pointer; color: #5eead4; font-weight: 750; }.install-help ol { margin: 10px 0 0; padding-left: 20px; }
+@media (max-width: 480px) { .monitor-card { padding: 20px; border-radius: 18px; } }
+@media (orientation: landscape) and (max-height: 600px) { .app-shell { align-items: start; padding-top: max(14px, env(safe-area-inset-top)); } .monitor-card { width: min(94vw, 820px); padding: 18px 24px; } .camera-frame { margin: 16px 0 12px; aspect-ratio: 16 / 7; } .intro, .hint { margin-block: 8px; } }

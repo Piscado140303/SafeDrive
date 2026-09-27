@@ -1,0 +1,20 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+.vite/
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Keep public/models/ and public/mediapipe/ tracked: they contain the local
+# MediaPipe model and WASM runtime required for SafeDrive's offline operation.
